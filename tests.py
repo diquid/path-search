@@ -1,5 +1,4 @@
 import unittest
-
 import graph_random_builder
 from graphs_class import GraphSearchAlgorithms, WeightedGraphSearchAlgorithms
 import queue
