@@ -3,8 +3,8 @@ from graphs_class import *
 
 
 def dijkstra(graph, start=0):
-    if graph.negative_edge:
-        return None
+    # if graph.negative_edge:
+    #     return None
     matrix = [[float('inf') for _ in range(graph.vertex_count)] for _ in range(graph.vertex_count)]
     for i in range(graph.vertex_count):
         matrix[i][i] = 0
@@ -30,8 +30,8 @@ def dijkstra(graph, start=0):
 
 
 def dijkstra_with_path(graph, start, end):
-    if graph.negative_edge:
-        return None
+    # if graph.negative_edge:
+    #     return None
     parents = [-1] * graph.vertex_count
     parents[start] = -2
     distance = [float('inf')] * graph.vertex_count

@@ -56,14 +56,14 @@ def get_chain(n):
     graph = set()
     for i in range(n - 1):
         graph.add((i, i + 1))
-    return list(graph)
+    return graph
 
 
 def get_weighted_chain(n):
     graph = set()
     for i in range(n - 1):
         graph.add((i, i + 1,random.randint(0, 500000000)))
-    return list(graph)
+    return graph
 
 
 def get_dense_graph(n):
@@ -73,7 +73,7 @@ def get_dense_graph(n):
     for i in range(n - 1):
         for j in range(i):
             graph.add((i, j))
-    return list(graph)
+    return graph
 
 
 def get_dense_weighted_graph(n):
@@ -83,4 +83,4 @@ def get_dense_weighted_graph(n):
     for i in range(n - 1):
         for j in range(i):
             graph.add((i, j, random.randint(0, 500000000)))
-    return list(graph)
+    return graph
