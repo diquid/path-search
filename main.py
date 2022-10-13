@@ -11,16 +11,32 @@ from bfs_algorithm import bfs
 os.environ["PATH"] += os.pathsep + 'D:/Graphviz/bin/'
 
 # weighted graphs
-w_first_test_graph = WeightedGraphSearchAlgorithms(vertex_count=500, edges=graph_random_builder.get_random_graph(500, True, False), oriented=False)  # random oriented
-w_second_test_graph = WeightedGraphSearchAlgorithms(vertex_count=500, edges=graph_random_builder.get_random_graph(500, True, False), oriented=True)  # random non-oriented
-w_third_test_graph = WeightedGraphSearchAlgorithms(vertex_count=500, edges=graph_random_builder.get_weighted_chain(500), oriented=False)  # chain
-w_fourth_test_graph = WeightedGraphSearchAlgorithms(vertex_count=100, edges=graph_random_builder.get_dense_weighted_graph(100), oriented=True)  # dense
+w_first_test_graph = WeightedGraphSearchAlgorithms(vertex_count=500,
+                                                   edges=graph_random_builder.get_random_graph(500, True, False),
+                                                   oriented=False)  # random oriented
+w_second_test_graph = WeightedGraphSearchAlgorithms(vertex_count=500,
+                                                    edges=graph_random_builder.get_random_graph(500, True, False),
+                                                    oriented=True)  # random non-oriented
+w_third_test_graph = WeightedGraphSearchAlgorithms(vertex_count=500,
+                                                   edges=graph_random_builder.get_weighted_chain(500),
+                                                   oriented=False)  # chain
+w_fourth_test_graph = WeightedGraphSearchAlgorithms(vertex_count=100,
+                                                    edges=graph_random_builder.get_dense_weighted_graph(100),
+                                                    oriented=True)  # dense
 
 # non-weighted graphs
-first_test_graph = GraphSearchAlgorithms(vertex_count=500, edges=graph_random_builder.get_random_graph(500, False, False), oriented=False)  # random oriented
-second_test_graph = GraphSearchAlgorithms(vertex_count=500, edges=graph_random_builder.get_random_graph(500, False, False), oriented=True)  # random non-oriented
-third_test_graph = GraphSearchAlgorithms(vertex_count=500, edges=graph_random_builder.get_chain(500), oriented=False)  # chain
-fourth_test_graph = GraphSearchAlgorithms(vertex_count=100, edges=graph_random_builder.get_dense_graph(100), oriented=True)  # dense
+first_test_graph = GraphSearchAlgorithms(vertex_count=500,
+                                         edges=graph_random_builder.get_random_graph(500, False, False),
+                                         oriented=False)  # random oriented
+second_test_graph = GraphSearchAlgorithms(vertex_count=500,
+                                          edges=graph_random_builder.get_random_graph(500, False, False),
+                                          oriented=True)  # random non-oriented
+third_test_graph = GraphSearchAlgorithms(vertex_count=500,
+                                         edges=graph_random_builder.get_chain(500),
+                                         oriented=False)  # chain
+fourth_test_graph = GraphSearchAlgorithms(vertex_count=100,
+                                          edges=graph_random_builder.get_dense_graph(100),
+                                          oriented=True)  # dense
 
 
 if __name__ == '__main__':

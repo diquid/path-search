@@ -81,7 +81,8 @@ class WeightedGraphSearchAlgorithms:
             self.adjacent_vertices.append(set())
         for i in range(self.vertex_count):
             for j in range(self.vertex_count):
-                self.adjacent_vertices[i].add((matrix[i][j][0], matrix[i][j][1]))
+                self.adjacent_vertices[i].add((matrix[i][j][0],
+                                               matrix[i][j][1]))
                 if matrix[i][j][1] < 0:
                     self.negative_edge = True
 
@@ -98,7 +99,9 @@ class WeightedGraphSearchAlgorithms:
             for j in graph.adjacent_vertices[path[i]]:
                 if j[0] == path[i + 1] and min_edge > j[1]:
                     min_edge = j[1]
-            graph_.edge(str(path[i]), str(path[i + 1]), label=str(min_edge), color='red')
+            graph_.edge(str(path[i]), str(path[i + 1]),
+                        label=str(min_edge),
+                        color='red')
             edges.remove((str(path[i]), str(path[i + 1]), str(min_edge)))
         for i in edges:
             graph_.edge(i[0], i[1], label=i[2])

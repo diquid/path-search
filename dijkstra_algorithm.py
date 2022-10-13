@@ -5,7 +5,8 @@ from graphs_class import *
 def dijkstra(graph, start=0):
     # if graph.negative_edge:
     #     return None
-    matrix = [[float('inf') for _ in range(graph.vertex_count)] for _ in range(graph.vertex_count)]
+    matrix = [[float('inf') for _ in range(graph.vertex_count)]
+              for _ in range(graph.vertex_count)]
     for i in range(graph.vertex_count):
         matrix[i][i] = 0
         for j in graph.adjacent_vertices[i]:
@@ -49,4 +50,5 @@ def dijkstra_with_path(graph, start, end):
                 parents[next[0]] = vertex
                 distance[next[0]] = distance[vertex] + next[1]
                 q.put((distance[next[0]], next[0]))
-    return distance[end], GraphSearchAlgorithms.restore_path(parents, start, end)
+    return distance[end], GraphSearchAlgorithms.restore_path(
+                                                parents, start, end)
